@@ -1,4 +1,7 @@
-// to test the stream API response:
+// console #1:
+// pnpx tsx src/16725.ts
+
+// console #2:
 // curl -X POST -H "Accept: application/x-ndjson" -H "Content-Type: text/plain" "http://localhost:8080/api/stream/games-by-users" --data "bobby,mary"
 
 import { Chess } from 'chess.js'
