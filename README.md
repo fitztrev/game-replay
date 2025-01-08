@@ -1,3 +1,9 @@
+## Setup
+
+```bash
+pnpm install
+```
+
 ## Usage
 
 ```bash
