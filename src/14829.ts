@@ -1,8 +1,7 @@
-import { Chess } from 'chess.js'
 import createClient from 'openapi-fetch'
 import type { paths } from '@lichess-org/types'
 import open from 'open'
-import { baseUrl, sleep } from './config'
+import { baseUrl } from './config'
 
 const pgn = `
   [Event "Wch Blitz"]
@@ -21,13 +20,6 @@ const client = createClient<paths>({
     headers: { Authorization: `Bearer lip_bobby` },
 })
 
-// const { data, error } = await client.POST('/api/import', {
-//     body: { pgn },
-// })
-
-// console.log(data)
-// console.log(error)
-
 const studyId = 'E4kegXQh';
 
 const { data, error } = await client.POST('/api/study/{studyId}/import-pgn', {
@@ -37,17 +29,11 @@ const { data, error } = await client.POST('/api/study/{studyId}/import-pgn', {
         pgn,
     },
 });
-// const { data, error } = await client.POST('/api/import', {
-//     body: {
-//         pgn,
-//     },
-// });
 
 console.log(data)
 console.log(JSON.stringify(data, null, 2))
 console.log(error)
 
-// @ts-ignore
-const url = `${baseUrl}/study/${studyId}/${data?.chapters[0].id}`
+const url = `${baseUrl}/study/${studyId}/${data?.chapters![0].id}`
 console.log(url);
 open(url);

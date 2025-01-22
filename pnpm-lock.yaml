@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@faker-js/faker':
+        specifier: ^9.4.0
+        version: 9.4.0
       '@lichess-org/types':
-        specifier: ^2.0.21
-        version: 2.0.21
+        specifier: ^2.0.22
+        version: 2.0.22
       chess.js:
         specifier: 1.0.0-beta.8
         version: 1.0.0-beta.8
@@ -23,8 +26,12 @@ importers:
 
 packages:
 
-  '@lichess-org/types@2.0.21':
-    resolution: {integrity: sha512-GE0x9PLPG+04M2n7CDziIiFY4X7a9eSoq2MEePHttfSI7XeNVs+arnKOgPEp7kvwAgYFtHsc+z7k6Q/3UW5Nng==}
+  '@faker-js/faker@9.4.0':
+    resolution: {integrity: sha512-85+k0AxaZSTowL0gXp8zYWDIrWclTbRPg/pm/V0dSFZ6W6D4lhcG3uuZl4zLsEKfEvs69xDbLN2cHQudwp95JA==}
+    engines: {node: '>=18.0.0', npm: '>=9.0.0'}
+
+  '@lichess-org/types@2.0.22':
+    resolution: {integrity: sha512-OIUJO4pSUXzV5o4mTb/71u0E6z5PS+flyrYE8L0Hu8x5NmTHk3qFcs4d84u9vo9YkQHqQdmsY/iFpLyDYl3lhA==}
 
   bundle-name@4.1.0:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
@@ -75,7 +82,9 @@ packages:
 
 snapshots:
 
-  '@lichess-org/types@2.0.21': {}
+  '@faker-js/faker@9.4.0': {}
+
+  '@lichess-org/types@2.0.22': {}
 
   bundle-name@4.1.0:
     dependencies:
